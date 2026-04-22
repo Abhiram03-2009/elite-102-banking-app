@@ -3,7 +3,7 @@ from flask_cors import CORS
 import db
 
 app = Flask(__name__)
-CORS(app) # Allow cross-origin requests from our Vite React frontend
+CORS(app)
 
 @app.route('/accounts', methods=['GET'])
 def get_accounts():
@@ -47,6 +47,6 @@ def handle_withdraw(account_id):
         return jsonify({'error': str(e)}), 400
 
 if __name__ == '__main__':
-    db.init_db() # Ensure DB is initialized before starting
+    db.init_db()
     print("Starting CryptoVault Flask Server...")
     app.run(debug=True, port=5000)

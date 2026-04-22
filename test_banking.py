@@ -39,7 +39,6 @@ def run_tests():
             found = True
     assert found
     
-    # cleanup db for fresh run if needed, but we'll leave it to show data
     print("ALL TESTS PASSED!")
 
 if __name__ == '__main__':
